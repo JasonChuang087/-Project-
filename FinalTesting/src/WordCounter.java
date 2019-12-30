@@ -46,11 +46,30 @@ public class WordCounter {
 			retVal++  ;
 			start = content.indexOf(keyword, start)+keyword.length();
 			}
-			//System.out.println(keyword+"在網頁出現的次數為"+ retVal);
+			System.out.println(keyword+"在網頁出現的次數為"+ retVal);
 			return retVal;
 			
 			}
-
+    /*public int countKeyword(String keyword) throws IOException{
+		if (content == null){
+		    content = fetchContent();
+		}
+		
+		//To do a case-insensitive search, we turn the whole content and keyword into upper-case:
+		content = content.toUpperCase();
+		keyword = keyword.toUpperCase();
+	
+		int retVal = 0;
+		int fromIdx = 0;
+		int found = -1;
+	
+		while ((found = content.indexOf(keyword, fromIdx)) != -1){
+		    retVal++;
+		    fromIdx = found + keyword.length();
+		}
+		System.out.println(keyword+"在網頁出現的次數為"+ retVal);
+		return retVal;
+    }*/
 		
 
     }
